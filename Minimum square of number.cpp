@@ -30,12 +30,12 @@ bool legendre(int n) {
     return false;
 }
 
-int min_squares(int n) {
+int min_squares(int n) { // O(sqrt(n))
     if (isPerfectSquare(n))
         return 1;
 
-    for (int i = 1; i * i < N; i++) {
-        if (isPerfectSquare(N - i * i))
+    for (int i = 1; i * i < n; i++) {
+        if (isPerfectSquare(n - i * i))
             return 2;
     }
 
